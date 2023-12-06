@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  color: #222;
+  background: #fff;
+}
+
+a {
+  color: #0033cc;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: #000000;
+  }
+}
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Vertically align the logo and text */
+}
+
+.logo img {
+  width: 500px; /* Adjust the width of the logo */
+  height: 124px;
+  margin-right: 10px; /* Add some spacing between the logo and text */
+}
+
+.logo p {
+  font-size: 40px; /* Adjust the font size as needed */
+}
+
+.top-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.top-nav ul li {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  display: inline;
+}
+
+/* Style the "Login" and "Signup" links */
+.top-nav ul li a {
+  font-size: 14px; /* Adjust the font size as needed */
+  text-decoration: none;
+  color: #fff;
+  background-color: #1E6363;
+  border-radius: 5px; /* Optional: Add rounded corners to the border */
+  padding: 5px 10px; /* Add some padding for better visibility */
+}
+
+/* Change cursor style on hover */
+.top-nav ul li a:hover {
+  cursor: pointer; /* Change cursor style on hover */
+  background-color: #1E3563;
+}
+
+.search-input {
+  width: 300px; /* Adjust the width as needed to make it longer */
+  padding: 5px; /* Add padding to the input field */
+  border: 1px solid #ffffff; /* Add a border */
+  background-color: #898989;
+  color: #ffffff;
+  border-radius: 5px; /* Add rounded corners to the input field */
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-left: 2px; /* Add margin to separate it from the login and signup links */
+  margin-right: 300px;
+}
+
+/* Change the placeholder text */
+.search-input::placeholder {
+  color: #ffffff; /* Change the placeholder text color to a different color (you can use any color code you prefer) */
+}
+
+.bottom-nav {
+  background-color: #2b2d39;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Move items to the right */
+  align-items: center; /* Vertically align items */
+}
+
+.bottom-nav ul {
+  display: inline;
+  padding: 0;
+}
+
+.bottom-nav ul li {
+  display: inline;
+  padding-right: 30px;
+}
+
+/* Style the "Home," "Categories," and "FAQ" links */
+.bottom-nav ul li a {
+  /* padding: 5px 10px; */
+  text-decoration: none;
+  color: #fff;
+  background-color: #2b2d39;
+  /* border-radius: 5px;
+  margin-right: 5px; */
+  font-weight: bold;
+  cursor: pointer; /* Change cursor style to indicate links are clickable */
+}
+
+/* Change cursor style on hover */
+.bottom-nav ul li a:hover {
+  cursor: pointer; /* Change cursor style on hover */
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+  background-color: #2b2d39;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.signup-container {
+  width: 300px;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #ffffff6b;
+  border-radius: 5px;
+  background-color: #181818;
+}
+
+.signup-container h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.signup-container form {
+  text-align: center;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-container button {
+  background-color: #1E6363;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.signup-container button:hover {
+  background-color: #1E3563;
+}
+
+.btn-primary {
+  color: rgb(0, 0, 0);
+  background-color: #1E6363;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #1E3563;
+}
+
+.shop-item {
+  margin: 30px;
+}
+
+.shop-item-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.shop-item-image {
+  height: 250px;
+}
+
+.shop-item-details {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.shop-item-price {
+  flex-grow: 1;
+}
+
+.shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 970px) {
+  .logo {
+    flex-direction: column; /* Stack the logo and text vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .logo img {
+    margin-right: 10px; /* Add spacing between the logo and text */
+  }
+
+  .top-nav {
+      margin-right: auto;
+
+  }
+
+  .bottom-nav ul li {
+    margin-right: 150px;
+    justify-content: space-between; /* Horizontally align items with space between them */
+    align-items: center; /* Vertically align items */
+
+  }
+}
